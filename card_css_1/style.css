@@ -1,0 +1,138 @@
+/* Estilo general */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #048168;
+}
+
+/* Capa de fondo verde claro (más ancha) */
+.background-layer {
+  width: 400px;
+  background-color: #85a942; /* Verde claro */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Centra la capa */
+  padding: 20px; /* Añade padding para dar espacio entre las capas */
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+}
+
+/* Capa superior verde oscuro con imagen centrada */
+.top-layer {
+  background-color: #467c04; /* Verde oscuro */
+  padding: 20px 0;
+  text-align: center;
+  border-radius: 50px 50px 0 0;
+  
+}
+
+.top-layer img {
+  max-width: 70%;
+  height: auto;
+  border-radius: 5px;
+  border-radius: 50px 50px 0 0;
+}
+
+/* Línea divisoria */
+.divider {
+  margin: 5px 0;
+}
+
+/* Capa de texto centrado con fondo verde oscuro */
+.text-layer {
+  background-color: #467c04; /* Verde más oscuro */
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.text-layer p {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+/* Capa de texto adicional con verde oscuro */
+.additional-text-layer {
+  background-color: #467c04; /* Verde oscuro */
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.additional-text-layer p {
+  font-size: 16px;
+    border-radius: 50px 50px 0 0;  
+}
+
+.imagen-verde {
+  width: 300px;
+  height: auto;
+  filter: sepia(5) saturate(0) hue-rotate(120deg); /* Tono verdoso */
+  transition: all 0.3s ease;
+  border-radius: 50px 50px 0 0; /* Suaviza el cambio */
+}
+
+/* Al pasar el ratón */
+.imagen-verde:hover {
+  filter: none; /* Imagen original */
+  transform: scale(1.05); /* Un poco más grande */
+}
+
+.nombre-decorado {
+  text-transform: uppercase;         /* MAYÚSCULAS */
+  letter-spacing: 8px;              /* Espaciado entre letras */
+  text-align: center;               /* Centrado */
+  color: white;                     /* color nombre */
+  margin-top: 20px;                 
+  position: relative;               /* Necesario para la línea decorativa que va por encima del nombre */
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nombre-decorado:hover {
+  filter: none; /* Imagen original */
+  transform: scale(1.05); /* Un poco más grande */
+}
+
+/* Línea decorativa por encima del nombre */
+.nombre-decorado::before {
+  content: "";
+  position: absolute;
+  top: -10px;                       /* Distancia de la línea al texto */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;                       /* Ajusta según quieras */
+  height: 2px;
+  background-color: white;         /* Color de la línea */
+}
+
+table.tabla-sin-bordes {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 290px;
+  margin: 0 auto;
+  
+}
+
+.tabla-sin-bordes td {
+  padding: 3px;
+  text-align: center;
+  border: none; /* Quitar bordes */
+  background-color: #85a942;
+  font-size: 12px;
+  color:black
+  
+  
+}
+
+ .tabla-sin-bordes td:hover {
+   filter: none; /* Imagen original */
+   font-size: 12px;
+   color: white
+}
+
