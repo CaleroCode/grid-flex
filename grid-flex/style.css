@@ -1,0 +1,108 @@
+* {
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+body {
+    background-color: rgb(116, 116, 116);
+}
+.header-container{
+    background-color: rgb(46, 80, 98);
+    border: 10px solid black;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    gap: 10px;
+}
+.logo {
+    background-color: rgb(139, 139, 31);
+    display: flex;
+    justify-content: center;
+    padding: 10px
+}
+.nav-links {
+    background-color: rgb(139, 139, 31);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    flex-grow: 1;
+    gap: 20px;
+}
+.registro {
+    background-color: rgb(139, 139, 31);
+    display: flex;
+    justify-content: center;
+    padding: 10px
+}
+.banner-container {
+    background-color: rgb(107, 13, 13);
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+    border-bottom: 10px solid black;
+    border-top: 1px solid black;
+}
+.banner {
+    background-color: rgb(139, 139, 31);
+    margin: 20px;
+    font-size: 1rem;
+    padding: 8px;
+}
+main {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "articulos opciones"
+        "comentarios opciones";
+    gap: 20px;
+    padding: 20px;
+    background-color: rgb(46, 80, 98);
+    border: 10px solid black;
+    height: auto;
+}
+.articulos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-area: articulos;
+}
+.h {
+    background-color: rgb(139, 139, 31);
+    margin: 10px;
+    height: 30px;
+    align-content: center;
+    color: rgb(107, 13, 13);;
+}
+.h2 {
+    background-color: rgb(139, 139, 31);
+    margin: 5px;
+    height: 30px;
+    align-content: center;
+    color: rgb(107, 13, 13);;
+}
+.comentarios{
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 10px;
+}
+.opcion {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    grid-area: opciones;
+    flex-direction: column;
+    background-color: rgb(107, 13, 13);
+    border-left: 10px solid black;
+} 
+.footer  {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    background-color: rgb(139, 139, 31);
+    border: 10px solid black;
+    display: flex;
+    justify-content: center;
+}
