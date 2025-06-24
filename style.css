@@ -75,17 +75,20 @@ main {
 .comentarios h2 {
     background-color: rgb(139, 139, 31);
     padding: 10px;
-  margin-bottom: 15px;
+    margin-bottom: 15px;
+    margin-left: 10px;
 }
 .opcion {
     grid-area: opciones;
     background-color: rgb(107, 13, 13);
     border-left: 10px solid black;
+    padding: 20px;
 } 
 .opcion-card {
     background-color: rgb(139, 139, 31);
-    grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-left: 10px;
 }
 .footer  {
     display: flex;
