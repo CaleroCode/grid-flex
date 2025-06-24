@@ -2,6 +2,7 @@
     font-size: 1rem;
     text-transform: uppercase;
     text-align: center;
+    color: rgb(107, 13, 13);
 }
 
 body {
@@ -54,49 +55,38 @@ main {
     margin-top: 10px;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto auto;
     grid-template-areas:
         "articulos opciones"
         "comentarios opciones";
     gap: 20px;
-    padding: 20px;
     background-color: rgb(46, 80, 98);
     border: 10px solid black;
-    height: auto;
 }
 .articulos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-area: articulos;
 }
-.h {
-    background-color: rgb(139, 139, 31);
-    margin: 10px;
-    height: 30px;
-    align-content: center;
-    color: rgb(107, 13, 13);;
-}
-.h2 {
-    background-color: rgb(139, 139, 31);
-    margin: 5px;
-    height: 30px;
-    align-content: center;
-    color: rgb(107, 13, 13);;
-}
 .comentarios{
-    grid-column: 1 / -1;
+    grid-template-columns: repeat(1, 2fr);
     display: grid;
-    grid-template-columns: 1fr; 
-    gap: 10px;
+}
+.articulos h2,
+.comentarios h2 {
+    background-color: rgb(139, 139, 31);
+    padding: 10px;
+  margin-bottom: 15px;
 }
 .opcion {
-    display: flex;
-    grid-template-columns: repeat(2, 1fr);
     grid-area: opciones;
-    flex-direction: column;
     background-color: rgb(107, 13, 13);
     border-left: 10px solid black;
 } 
+.opcion-card {
+    background-color: rgb(139, 139, 31);
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 10px;
+}
 .footer  {
     display: flex;
     margin-top: 10px;
