@@ -96,6 +96,5 @@ main {
     justify-content: space-between;
     background-color: rgb(139, 139, 31);
     border: 10px solid black;
-    display: flex;
     justify-content: center;
 }
