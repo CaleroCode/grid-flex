@@ -3,86 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Ficha de gustos</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/cards.css">
+    <link rel="icon" href="favicon/favicon.png" type="image/x-icon">
+    <title>BOOTCAMP | SUPERKODE</title>
 </head>
 <body>
-<main>
-    <div class="container">
-                    <!-- Capa de fondo, oscuro -->
-        <div class="background-layer">
-                    <!-- Capa superior, pricipal -->
-           <section>
-            <div class="top-layer">
-            <img src="img/img.jpg" alt="Hombre acaricia un gamo salvaje" class="imagen-verde">
-            </div>
-           </section>  
+
+<header>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="logo-container">
+      <div class="logo">BOOTCAMP</div>
+      <div class="sublogo">PROGRAMACIÓN FULL STACK</div>
+      </div>
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      <ul class="nav-list" id="nav-list">
+        <li><a href="#" data-page="index">Inicio</a></li>
+        <li><a href="#" data-page="cards">Cards</a></li>
+        <li><a href="#" data-page="contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+  <article>
+    <div class="container-index">
+        <div class="titulo-carrusel"> <br>
                     <!-- Línea divisoria delgada -->
                     <div class="divider"></div>
                     <!--nombre -->
-            <section>
-                 <div class="text-layer">
-                 <div class="nombre-decorado">Iván Calero <div>                   
-                </div>
+            <br>
+            <section class="titulo-index">
+                <h2 class="nombre-decorado"><br>¡Bienvenid@ al bootcamp SúperKode!</h2>
+                <h2 class="h2-index">¡Echa un vistazo para conocer a los compañeros y ponte en contacto con nosotros para cualquier duda!</h2><br>
             </section>
-                    <!-- Línea divisoria delgada -->
-                    <div class="divider"></div>
-                    <!-- info -->
-            <section>
-                    <div class="additional-text-layer">
-                            <table class="tabla-sin-bordes">
-                                <tr>
-                                <td>COMIDA</td>
-                                <td>CIUDAD</td>
-                                </tr>
-                                <tr>
-                                <td>🍣Sushi</td>
-                                <td>🏙️Yellowknife</td>
-                                </tr>
-                                <tr>
-                                <td colspan="2"></td>
-                                </tr>
-                                <tr>
-                                <td colspan="2"></td>
-                                </tr> <tr>
-                                <td colspan="2"></td>
-                                </tr>
-                                <tr>
-                                <td colspan="2"></td>
-                                </tr>
-                                <tr>
-                                <td colspan="2">¡OTROS GUSTOS!</td>
-                                </tr>
-                                <tr>
-                                <td colspan="2">Animal: 🫎 Ciervo</td>
-                                </tr>
-                                <tr>
-                                <td colspan="2">Serie: 🪰 Breaking Bad</td>
-                                </tr>
-                                <tr>
-                                <td colspan="2">Juego de mesa: 🧐 Monopoly</td>
-                                </tr>
-                                  <tr>
-                                <td colspan="2"></td>
-                                </tr>
-                                <tr>
-                                <td colspan="2"></td>
-                                </tr> <tr>
-                                <td colspan="2"></td>
-                                </tr>
-                                <tr>
-                                <td colspan="2"></td>
-                                </tr>
-                                <tr>
-                                <tr>
-                                <td colspan="2">¡MÚSICA FAVORITA: 🤘ROCK&ROLL!</td>
-                                </tr>
-                                <tr>
-                            </table>                   
-                    </div>
-            </section>
-        </div>
+                                                  
+         </div>
     </div>
+  </article>
 </main>
+
+<!-- Script de JavaScript para que el contenido esté en el <main> -->
+<script>
+  const links = document.querySelectorAll(".nav-list a");
+  const main = document.getElementById("main-content");
+
+  links.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const page = link.getAttribute("data-page");
+      fetch(`${page}.html`)
+        .then(res => res.text())
+        .then(html => {
+          main.innerHTML = html;
+        });
+    });
+  });
+
+  // Menú hamburguesa para verlo dsede movieles
+  const toggle = document.getElementById("menu-toggle");
+  const navList = document.getElementById("nav-list");
+
+  toggle.addEventListener("click", () => {
+    navList.classList.toggle("show");
+  });
+</script>
 </body>
 </html>

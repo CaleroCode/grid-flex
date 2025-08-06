@@ -62,7 +62,7 @@ function longitud(texto)
 function caps(texto)
     {return texto.toUpperCase()}
         console.log(caps("Hey there!!"))
-
+// fallo?
 function lower(texto)
     {return texto.toLowerCase()}
         console.log(lower("HERE'S JOHNNY!!!!"))
